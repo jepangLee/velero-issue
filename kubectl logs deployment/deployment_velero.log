@@ -1,0 +1,364 @@
+time="2020-10-13T08:53:04Z" level=info msg="setting log-level to INFO" logSource="pkg/cmd/server/server.go:191"
+time="2020-10-13T08:53:04Z" level=info msg="Starting Velero server v1.5.1 (87d86a45a6ca66c6c942c7c7f08352e26809426c)" logSource="pkg/cmd/server/server.go:193"
+time="2020-10-13T08:53:04Z" level=info msg="1 feature flags enabled []" logSource="pkg/cmd/server/server.go:195"
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/velero kind=BackupItemAction logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/crd-remap-version
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/velero kind=BackupItemAction logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/pod
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/velero kind=BackupItemAction logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/pv
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/velero kind=BackupItemAction logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/service-account
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/velero kind=RestoreItemAction logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/add-pv-from-pvc
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/velero kind=RestoreItemAction logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/add-pvc-from-pod
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/velero kind=RestoreItemAction logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/change-pvc-node-selector
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/velero kind=RestoreItemAction logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/change-storage-class
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/velero kind=RestoreItemAction logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/cluster-role-bindings
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/velero kind=RestoreItemAction logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/crd-preserve-fields
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/velero kind=RestoreItemAction logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/init-restore-hook
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/velero kind=RestoreItemAction logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/job
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/velero kind=RestoreItemAction logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/pod
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/velero kind=RestoreItemAction logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/restic
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/velero kind=RestoreItemAction logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/role-bindings
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/velero kind=RestoreItemAction logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/service
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/velero kind=RestoreItemAction logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/service-account
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/plugins/velero-plugin-for-aws kind=VolumeSnapshotter logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/aws
+time="2020-10-13T08:53:04Z" level=info msg="registering plugin" command=/plugins/velero-plugin-for-aws kind=ObjectStore logSource="pkg/plugin/clientmgmt/registry.go:100" name=velero.io/aws
+time="2020-10-13T08:53:05Z" level=info msg="Checking existence of namespace." logSource="pkg/cmd/server/server.go:380" namespace=velero
+time="2020-10-13T08:53:05Z" level=info msg="Namespace exists" logSource="pkg/cmd/server/server.go:386" namespace=velero
+I1013 08:53:06.888126       1 request.go:621] Throttling request took 1.048814575s, request: GET:https://172.20.0.1:443/apis/scheduling.k8s.io/v1beta1?timeout=32s
+time="2020-10-13T08:53:07Z" level=info msg="Checking existence of Velero custom resource definitions" logSource="pkg/cmd/server/server.go:415"
+time="2020-10-13T08:53:12Z" level=info msg="All Velero custom resource definitions exist" logSource="pkg/cmd/server/server.go:449"
+time="2020-10-13T08:53:12Z" level=info msg="Starting controllers" logSource="pkg/cmd/server/server.go:571"
+time="2020-10-13T08:53:12Z" level=info msg="Starting metric server at address [:8085]" logSource="pkg/cmd/server/server.go:578"
+time="2020-10-13T08:53:12Z" level=info msg="Backup sync period is 1m0s" logSource="pkg/controller/backup_sync_controller.go:76"
+time="2020-10-13T08:53:12Z" level=info msg="Waiting for informer caches to sync" logSource="pkg/cmd/server/server.go:836"
+time="2020-10-13T08:53:12Z" level=info msg="Done waiting for informer caches to sync" logSource="pkg/cmd/server/server.go:839"
+time="2020-10-13T08:53:12Z" level=info msg="Informer cache synced" informer="*v1.Backup" logSource="pkg/cmd/server/server.go:850"
+time="2020-10-13T08:53:12Z" level=info msg="Informer cache synced" informer="*v1.DownloadRequest" logSource="pkg/cmd/server/server.go:850"
+time="2020-10-13T08:53:12Z" level=info msg="Informer cache synced" informer="*v1.VolumeSnapshotLocation" logSource="pkg/cmd/server/server.go:850"
+time="2020-10-13T08:53:12Z" level=info msg="Informer cache synced" informer="*v1.Schedule" logSource="pkg/cmd/server/server.go:850"
+time="2020-10-13T08:53:12Z" level=info msg="Informer cache synced" informer="*v1.DeleteBackupRequest" logSource="pkg/cmd/server/server.go:850"
+time="2020-10-13T08:53:12Z" level=info msg="Informer cache synced" informer="*v1.PodVolumeBackup" logSource="pkg/cmd/server/server.go:850"
+time="2020-10-13T08:53:12Z" level=info msg="Informer cache synced" informer="*v1.ResticRepository" logSource="pkg/cmd/server/server.go:850"
+time="2020-10-13T08:53:12Z" level=info msg="Informer cache synced" informer="*v1.Restore" logSource="pkg/cmd/server/server.go:850"
+time="2020-10-13T08:53:12Z" level=info msg="Server starting..." logSource="pkg/cmd/server/server.go:896"
+time="2020-10-13T08:53:12Z" level=info msg="Starting controller" controller=downloadrequest logSource="pkg/controller/generic_controller.go:76"
+time="2020-10-13T08:53:12Z" level=info msg="Starting controller" controller=backup-sync logSource="pkg/controller/generic_controller.go:76"
+time="2020-10-13T08:53:12Z" level=info msg="Starting controller" controller=backup logSource="pkg/controller/generic_controller.go:76"
+time="2020-10-13T08:53:12Z" level=info msg="Starting controller" controller=schedule logSource="pkg/controller/generic_controller.go:76"
+time="2020-10-13T08:53:12Z" level=info msg="Starting controller" controller=gc-controller logSource="pkg/controller/generic_controller.go:76"
+time="2020-10-13T08:53:12Z" level=info msg="Starting controller" controller=backup-deletion logSource="pkg/controller/generic_controller.go:76"
+time="2020-10-13T08:53:12Z" level=info msg="Checking for expired DeleteBackupRequests" controller=backup-deletion logSource="pkg/controller/backup_deletion_controller.go:592"
+time="2020-10-13T08:53:12Z" level=info msg="Done checking for expired DeleteBackupRequests" controller=backup-deletion logSource="pkg/controller/backup_deletion_controller.go:620"
+time="2020-10-13T08:53:12Z" level=info msg="Starting controller" controller=restore logSource="pkg/controller/generic_controller.go:76"
+time="2020-10-13T08:53:12Z" level=info msg="Starting controller" controller=restic-repository logSource="pkg/controller/generic_controller.go:76"
+time="2020-10-13T08:53:12Z" level=info msg="Checking for existing backup locations ready to be verified; there needs to be at least 1 backup location available" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:58"
+time="2020-10-13T08:53:12Z" level=warning msg="The specified default backup location named \"default\" is unavailable; for convenience, be sure to configure it properly or make another backup location that is available the default" backupstoragelocation=default controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:105"
+time="2020-10-13T08:53:12Z" level=error msg="Current backup storage locations available/unavailable/unknown: 0/1/0, Backup location \"default\" is unavailable: Backup store contains invalid top-level directories: [velero])" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:152"
+time="2020-10-13T08:53:12Z" level=info msg="Checking for existing backup locations ready to be verified; there needs to be at least 1 backup location available" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:58"
+time="2020-10-13T08:53:12Z" level=info msg="No backup locations were ready to be verified" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:120"
+time="2020-10-13T08:53:12Z" level=error msg="Current backup storage locations available/unavailable/unknown: 0/1/0)" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:154"
+time="2020-10-13T08:53:12Z" level=info msg="Checking for existing backup locations ready to be verified; there needs to be at least 1 backup location available" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:58"
+time="2020-10-13T08:53:12Z" level=info msg="No backup locations were ready to be verified" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:120"
+time="2020-10-13T08:53:12Z" level=error msg="Current backup storage locations available/unavailable/unknown: 0/1/0)" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:154"
+time="2020-10-13T08:53:12Z" level=info msg="Checking for existing backup locations ready to be verified; there needs to be at least 1 backup location available" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:58"
+time="2020-10-13T08:53:12Z" level=info msg="No backup locations were ready to be verified" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:120"
+time="2020-10-13T08:53:12Z" level=error msg="Current backup storage locations available/unavailable/unknown: 0/1/0)" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:154"
+time="2020-10-13T08:53:12Z" level=info msg="Checking for existing backup locations ready to be verified; there needs to be at least 1 backup location available" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:58"
+time="2020-10-13T08:53:12Z" level=info msg="No backup locations were ready to be verified" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:120"
+time="2020-10-13T08:53:12Z" level=error msg="Current backup storage locations available/unavailable/unknown: 0/1/0)" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:154"
+time="2020-10-13T08:53:12Z" level=info msg="Checking for existing backup locations ready to be verified; there needs to be at least 1 backup location available" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:58"
+time="2020-10-13T08:53:12Z" level=info msg="No backup locations were ready to be verified" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:120"
+time="2020-10-13T08:53:12Z" level=error msg="Current backup storage locations available/unavailable/unknown: 0/1/0)" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:154"
+time="2020-10-13T08:53:13Z" level=info msg="Checking for existing backup locations ready to be verified; there needs to be at least 1 backup location available" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:58"
+time="2020-10-13T08:53:13Z" level=info msg="No backup locations were ready to be verified" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:120"
+time="2020-10-13T08:53:13Z" level=error msg="Current backup storage locations available/unavailable/unknown: 0/1/0)" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:154"
+time="2020-10-13T08:53:13Z" level=info msg="Checking for existing backup locations ready to be verified; there needs to be at least 1 backup location available" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:58"
+time="2020-10-13T08:53:13Z" level=info msg="No backup locations were ready to be verified" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:120"
+time="2020-10-13T08:53:13Z" level=error msg="Current backup storage locations available/unavailable/unknown: 0/1/0)" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:154"
+time="2020-10-13T08:53:14Z" level=info msg="Checking for existing backup locations ready to be verified; there needs to be at least 1 backup location available" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:58"
+time="2020-10-13T08:53:14Z" level=info msg="No backup locations were ready to be verified" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:120"
+time="2020-10-13T08:53:14Z" level=error msg="Current backup storage locations available/unavailable/unknown: 0/1/0)" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:154"
+time="2020-10-13T08:53:15Z" level=info msg="Checking for existing backup locations ready to be verified; there needs to be at least 1 backup location available" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:58"
+time="2020-10-13T08:53:15Z" level=info msg="No backup locations were ready to be verified" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:120"
+time="2020-10-13T08:53:15Z" level=error msg="Current backup storage locations available/unavailable/unknown: 0/1/0)" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:154"
+time="2020-10-13T08:53:18Z" level=info msg="Checking for existing backup locations ready to be verified; there needs to be at least 1 backup location available" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:58"
+time="2020-10-13T08:53:18Z" level=info msg="No backup locations were ready to be verified" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:120"
+time="2020-10-13T08:53:18Z" level=error msg="Current backup storage locations available/unavailable/unknown: 0/1/0)" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:154"
+time="2020-10-13T08:53:20Z" level=info msg="Setting up backup log" backup=velero/mysql-bu controller=backup logSource="pkg/controller/backup_controller.go:512"
+time="2020-10-13T08:53:20Z" level=info msg="Setting up backup temp file" backup=velero/mysql-bu logSource="pkg/controller/backup_controller.go:534"
+time="2020-10-13T08:53:20Z" level=info msg="Setting up plugin manager" backup=velero/mysql-bu logSource="pkg/controller/backup_controller.go:541"
+time="2020-10-13T08:53:20Z" level=info msg="Getting backup item actions" backup=velero/mysql-bu logSource="pkg/controller/backup_controller.go:545"
+time="2020-10-13T08:53:20Z" level=info msg="Setting up backup store to check for backup existence" backup=velero/mysql-bu logSource="pkg/controller/backup_controller.go:551"
+time="2020-10-13T08:53:21Z" level=info msg="Writing backup version file" backup=velero/mysql-bu logSource="pkg/backup/backup.go:236"
+time="2020-10-13T08:53:21Z" level=info msg="Including namespaces: test-backup" backup=velero/mysql-bu logSource="pkg/backup/backup.go:242"
+time="2020-10-13T08:53:21Z" level=info msg="Excluding namespaces: <none>" backup=velero/mysql-bu logSource="pkg/backup/backup.go:243"
+time="2020-10-13T08:53:21Z" level=info msg="Including resources: *" backup=velero/mysql-bu logSource="pkg/backup/backup.go:246"
+time="2020-10-13T08:53:21Z" level=info msg="Excluding resources: <none>" backup=velero/mysql-bu logSource="pkg/backup/backup.go:247"
+time="2020-10-13T08:53:21Z" level=info msg="Backing up all pod volumes using restic: false" backup=velero/mysql-bu logSource="pkg/backup/backup.go:248"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:165" resource=pods
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=pods
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 1 items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=pods
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:165" resource=persistentvolumeclaims
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=persistentvolumeclaims
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 1 items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=persistentvolumeclaims
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:165" resource=persistentvolumes
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:192" resource=persistentvolumes
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:165" resource=configmaps
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=configmaps
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=configmaps
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:165" resource=events
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=events
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=events
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:165" resource=replicationcontrollers
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=replicationcontrollers
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=replicationcontrollers
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:165" resource=services
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=services
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 1 items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=services
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:165" resource=namespaces
+time="2020-10-13T08:53:21Z" level=info msg="Getting namespace" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:239" namespace=test-backup resource=namespaces
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:165" resource=serviceaccounts
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=serviceaccounts
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 1 items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=serviceaccounts
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:165" resource=podtemplates
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=podtemplates
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=podtemplates
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:165" resource=limitranges
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=limitranges
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=limitranges
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:165" resource=resourcequotas
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=resourcequotas
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=resourcequotas
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:165" resource=secrets
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=secrets
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 1 items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=secrets
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:165" resource=nodes
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:192" resource=nodes
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:165" resource=endpoints
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=endpoints
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 1 items" backup=velero/mysql-bu group=v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=endpoints
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=apiregistration.k8s.io/v1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=apiregistration.k8s.io/v1 logSource="pkg/backup/item_collector.go:165" resource=apiservices
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=apiregistration.k8s.io/v1 logSource="pkg/backup/item_collector.go:192" resource=apiservices
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=apps/v1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=apps/v1 logSource="pkg/backup/item_collector.go:165" resource=statefulsets
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=apps/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=statefulsets
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 1 items" backup=velero/mysql-bu group=apps/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=statefulsets
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=apps/v1 logSource="pkg/backup/item_collector.go:165" resource=deployments
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=apps/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=deployments
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=apps/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=deployments
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=apps/v1 logSource="pkg/backup/item_collector.go:165" resource=daemonsets
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=apps/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=daemonsets
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=apps/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=daemonsets
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=apps/v1 logSource="pkg/backup/item_collector.go:165" resource=controllerrevisions
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=apps/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=controllerrevisions
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 1 items" backup=velero/mysql-bu group=apps/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=controllerrevisions
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=apps/v1 logSource="pkg/backup/item_collector.go:165" resource=replicasets
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=apps/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=replicasets
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=apps/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=replicasets
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=events.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=events.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:165" resource=events
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it cohabitates and we've already processed it" backup=velero/mysql-bu cohabitatingResource1=events cohabitatingResource2=events.events.k8s.io group=events.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:213" resource=events
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=autoscaling/v1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=autoscaling/v1 logSource="pkg/backup/item_collector.go:165" resource=horizontalpodautoscalers
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=autoscaling/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=horizontalpodautoscalers
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=autoscaling/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=horizontalpodautoscalers
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=batch/v1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=batch/v1 logSource="pkg/backup/item_collector.go:165" resource=jobs
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=batch/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=jobs
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=batch/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=jobs
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=batch/v1beta1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=batch/v1beta1 logSource="pkg/backup/item_collector.go:165" resource=cronjobs
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=batch/v1beta1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=cronjobs
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=batch/v1beta1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=cronjobs
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=certificates.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=certificates.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:165" resource=certificatesigningrequests
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=certificates.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:192" resource=certificatesigningrequests
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=networking.k8s.io/v1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=networking.k8s.io/v1 logSource="pkg/backup/item_collector.go:165" resource=networkpolicies
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=networking.k8s.io/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=networkpolicies
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=networking.k8s.io/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=networkpolicies
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=networking.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=networking.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:165" resource=ingresses
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=networking.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=ingresses
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=networking.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=ingresses
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=policy/v1beta1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=policy/v1beta1 logSource="pkg/backup/item_collector.go:165" resource=poddisruptionbudgets
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=policy/v1beta1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=poddisruptionbudgets
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=policy/v1beta1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=poddisruptionbudgets
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=policy/v1beta1 logSource="pkg/backup/item_collector.go:165" resource=podsecuritypolicies
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=policy/v1beta1 logSource="pkg/backup/item_collector.go:192" resource=podsecuritypolicies
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=rbac.authorization.k8s.io/v1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=rbac.authorization.k8s.io/v1 logSource="pkg/backup/item_collector.go:165" resource=clusterrolebindings
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=rbac.authorization.k8s.io/v1 logSource="pkg/backup/item_collector.go:192" resource=clusterrolebindings
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=rbac.authorization.k8s.io/v1 logSource="pkg/backup/item_collector.go:165" resource=rolebindings
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=rbac.authorization.k8s.io/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=rolebindings
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=rbac.authorization.k8s.io/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=rolebindings
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=rbac.authorization.k8s.io/v1 logSource="pkg/backup/item_collector.go:165" resource=clusterroles
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=rbac.authorization.k8s.io/v1 logSource="pkg/backup/item_collector.go:192" resource=clusterroles
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=rbac.authorization.k8s.io/v1 logSource="pkg/backup/item_collector.go:165" resource=roles
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=rbac.authorization.k8s.io/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=roles
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=rbac.authorization.k8s.io/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=roles
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=storage.k8s.io/v1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=storage.k8s.io/v1 logSource="pkg/backup/item_collector.go:165" resource=csinodes
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=storage.k8s.io/v1 logSource="pkg/backup/item_collector.go:192" resource=csinodes
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=storage.k8s.io/v1 logSource="pkg/backup/item_collector.go:165" resource=storageclasses
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=storage.k8s.io/v1 logSource="pkg/backup/item_collector.go:192" resource=storageclasses
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=storage.k8s.io/v1 logSource="pkg/backup/item_collector.go:165" resource=volumeattachments
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=storage.k8s.io/v1 logSource="pkg/backup/item_collector.go:192" resource=volumeattachments
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=storage.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=storage.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:165" resource=csidrivers
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=storage.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:192" resource=csidrivers
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=admissionregistration.k8s.io/v1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=admissionregistration.k8s.io/v1 logSource="pkg/backup/item_collector.go:165" resource=mutatingwebhookconfigurations
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=admissionregistration.k8s.io/v1 logSource="pkg/backup/item_collector.go:192" resource=mutatingwebhookconfigurations
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=admissionregistration.k8s.io/v1 logSource="pkg/backup/item_collector.go:165" resource=validatingwebhookconfigurations
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=admissionregistration.k8s.io/v1 logSource="pkg/backup/item_collector.go:192" resource=validatingwebhookconfigurations
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=apiextensions.k8s.io/v1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=apiextensions.k8s.io/v1 logSource="pkg/backup/item_collector.go:165" resource=customresourcedefinitions
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=apiextensions.k8s.io/v1 logSource="pkg/backup/item_collector.go:192" resource=customresourcedefinitions
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=scheduling.k8s.io/v1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=scheduling.k8s.io/v1 logSource="pkg/backup/item_collector.go:165" resource=priorityclasses
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=scheduling.k8s.io/v1 logSource="pkg/backup/item_collector.go:192" resource=priorityclasses
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=coordination.k8s.io/v1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=coordination.k8s.io/v1 logSource="pkg/backup/item_collector.go:165" resource=leases
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=coordination.k8s.io/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=leases
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=coordination.k8s.io/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=leases
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=node.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=node.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:165" resource=runtimeclasses
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=node.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:192" resource=runtimeclasses
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=discovery.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=discovery.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:165" resource=endpointslices
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=discovery.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=endpointslices
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=discovery.k8s.io/v1beta1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=endpointslices
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:165" resource=blockaffinities
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:192" resource=blockaffinities
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:165" resource=clusterinformations
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:192" resource=clusterinformations
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:165" resource=hostendpoints
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:192" resource=hostendpoints
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:165" resource=networkpolicies
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it cohabitates and we've already processed it" backup=velero/mysql-bu cohabitatingResource1=networkpolicies.extensions cohabitatingResource2=networkpolicies.networking.k8s.io group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:213" resource=networkpolicies
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:165" resource=globalnetworkpolicies
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:192" resource=globalnetworkpolicies
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:165" resource=networksets
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=networksets
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=networksets
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:165" resource=bgpconfigurations
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:192" resource=bgpconfigurations
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:165" resource=ipamblocks
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:192" resource=ipamblocks
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:165" resource=globalnetworksets
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:192" resource=globalnetworksets
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:165" resource=felixconfigurations
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:192" resource=felixconfigurations
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:165" resource=bgppeers
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:192" resource=bgppeers
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:165" resource=ippools
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=crd.projectcalico.org/v1 logSource="pkg/backup/item_collector.go:192" resource=ippools
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:165" resource=volumesnapshotlocations
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=volumesnapshotlocations
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=volumesnapshotlocations
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:165" resource=deletebackuprequests
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=deletebackuprequests
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=deletebackuprequests
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:165" resource=backups
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=backups
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=backups
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:165" resource=podvolumebackups
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=podvolumebackups
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=podvolumebackups
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:165" resource=backupstoragelocations
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=backupstoragelocations
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=backupstoragelocations
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:165" resource=restores
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=restores
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=restores
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:165" resource=downloadrequests
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=downloadrequests
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=downloadrequests
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:165" resource=resticrepositories
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=resticrepositories
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=resticrepositories
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:165" resource=serverstatusrequests
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=serverstatusrequests
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=serverstatusrequests
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:165" resource=podvolumerestores
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=podvolumerestores
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=podvolumerestores
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:165" resource=schedules
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=schedules
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=velero.io/v1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=schedules
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=crd.k8s.amazonaws.com/v1alpha1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=crd.k8s.amazonaws.com/v1alpha1 logSource="pkg/backup/item_collector.go:165" resource=eniconfigs
+time="2020-10-13T08:53:21Z" level=info msg="Skipping resource because it's cluster-scoped and only specific namespaces are included in the backup" backup=velero/mysql-bu group=crd.k8s.amazonaws.com/v1alpha1 logSource="pkg/backup/item_collector.go:192" resource=eniconfigs
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for group" backup=velero/mysql-bu group=extensions/v1beta1 logSource="pkg/backup/item_collector.go:76"
+time="2020-10-13T08:53:21Z" level=info msg="Getting items for resource" backup=velero/mysql-bu group=extensions/v1beta1 logSource="pkg/backup/item_collector.go:165" resource=ingresses
+time="2020-10-13T08:53:21Z" level=info msg="Listing items" backup=velero/mysql-bu group=extensions/v1beta1 logSource="pkg/backup/item_collector.go:291" namespace=test-backup resource=ingresses
+time="2020-10-13T08:53:21Z" level=info msg="Retrieved 0 items" backup=velero/mysql-bu group=extensions/v1beta1 logSource="pkg/backup/item_collector.go:297" namespace=test-backup resource=ingresses
+time="2020-10-13T08:53:21Z" level=info msg="Collected 9 items matching the backup spec from the Kubernetes API (actual number of items backed up may be more or less depending on velero.io/exclude-from-backup annotation, plugins returning additional related items to back up, etc.)" backup=velero/mysql-bu logSource="pkg/backup/backup.go:302" progress=
+time="2020-10-13T08:53:21Z" level=info msg="Processing item" backup=velero/mysql-bu logSource="pkg/backup/backup.go:378" name=lucent-mysql-sts-0 namespace=test-backup progress= resource=pods
+time="2020-10-13T08:53:21Z" level=info msg="Backing up item" backup=velero/mysql-bu logSource="pkg/backup/item_backupper.go:121" name=lucent-mysql-sts-0 namespace=test-backup resource=pods
+time="2020-10-13T08:53:21Z" level=info msg="Executing custom action" backup=velero/mysql-bu logSource="pkg/backup/item_backupper.go:327" name=lucent-mysql-sts-0 namespace=test-backup resource=pods
+time="2020-10-13T08:53:21Z" level=info msg="Executing podAction" backup=velero/mysql-bu cmd=/velero logSource="pkg/backup/pod_action.go:51" pluginName=velero
+time="2020-10-13T08:53:21Z" level=info msg="Adding pvc lucent-mysql-pvc to additionalItems" backup=velero/mysql-bu cmd=/velero logSource="pkg/backup/pod_action.go:67" pluginName=velero
+time="2020-10-13T08:53:21Z" level=info msg="Done executing podAction" backup=velero/mysql-bu cmd=/velero logSource="pkg/backup/pod_action.go:77" pluginName=velero
+time="2020-10-13T08:53:21Z" level=info msg="Backing up item" backup=velero/mysql-bu logSource="pkg/backup/item_backupper.go:121" name=lucent-mysql-pvc namespace=test-backup resource=persistentvolumeclaims
+time="2020-10-13T08:53:21Z" level=info msg="Executing custom action" backup=velero/mysql-bu logSource="pkg/backup/item_backupper.go:327" name=lucent-mysql-pvc namespace=test-backup resource=persistentvolumeclaims
+time="2020-10-13T08:53:21Z" level=info msg="Executing PVCAction" backup=velero/mysql-bu cmd=/velero logSource="pkg/backup/backup_pv_action.go:49" pluginName=velero
+time="2020-10-13T08:53:21Z" level=info msg="Backing up item" backup=velero/mysql-bu logSource="pkg/backup/item_backupper.go:121" name=pvc-6bef4e73-ae51-4e90-9b36-b366dc485a90 namespace= resource=persistentvolumes
+time="2020-10-13T08:53:21Z" level=info msg="Executing takePVSnapshot" backup=velero/mysql-bu logSource="pkg/backup/item_backupper.go:405" name=pvc-6bef4e73-ae51-4e90-9b36-b366dc485a90 namespace= resource=persistentvolumes
+time="2020-10-13T08:53:21Z" level=info msg="Skipping snapshot of persistent volume because volume is being backed up with restic." backup=velero/mysql-bu logSource="pkg/backup/item_backupper.go:423" name=pvc-6bef4e73-ae51-4e90-9b36-b366dc485a90 namespace= persistentVolume=pvc-6bef4e73-ae51-4e90-9b36-b366dc485a90 resource=persistentvolumes
+time="2020-10-13T08:53:21Z" level=info msg="Initializing restic repository" controller=restic-repository logSource="pkg/controller/restic_repository_controller.go:158" name=test-backup-default-n96qj namespace=velero
+time="2020-10-13T08:53:23Z" level=info msg="Checking for existing backup locations ready to be verified; there needs to be at least 1 backup location available" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:58"
+time="2020-10-13T08:53:23Z" level=info msg="No backup locations were ready to be verified" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:120"
+time="2020-10-13T08:53:23Z" level=error msg="Current backup storage locations available/unavailable/unknown: 0/1/0)" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:154"
+time="2020-10-13T08:53:33Z" level=info msg="Checking for existing backup locations ready to be verified; there needs to be at least 1 backup location available" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:58"
+time="2020-10-13T08:53:33Z" level=info msg="No backup locations were ready to be verified" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:120"
+time="2020-10-13T08:53:33Z" level=error msg="Current backup storage locations available/unavailable/unknown: 0/1/0)" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:154"
+time="2020-10-13T08:53:54Z" level=info msg="Checking for existing backup locations ready to be verified; there needs to be at least 1 backup location available" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:58"
+time="2020-10-13T08:53:54Z" level=info msg="No backup locations were ready to be verified" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:120"
+time="2020-10-13T08:53:54Z" level=error msg="Current backup storage locations available/unavailable/unknown: 0/1/0)" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:154"
+time="2020-10-13T08:54:12Z" level=info msg="Checking for existing backup locations ready to be verified; there needs to be at least 1 backup location available" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:58"
+time="2020-10-13T08:54:13Z" level=warning msg="The specified default backup location named \"default\" is unavailable; for convenience, be sure to configure it properly or make another backup location that is available the default" backupstoragelocation=default controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:105"
+time="2020-10-13T08:54:13Z" level=error msg="Current backup storage locations available/unavailable/unknown: 0/1/0, Backup location \"default\" is unavailable: Backup store contains invalid top-level directories: [velero])" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:152"
+time="2020-10-13T08:54:13Z" level=info msg="Checking for existing backup locations ready to be verified; there needs to be at least 1 backup location available" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:58"
+time="2020-10-13T08:54:13Z" level=info msg="No backup locations were ready to be verified" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:120"
+time="2020-10-13T08:54:13Z" level=error msg="Current backup storage locations available/unavailable/unknown: 0/1/0)" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:154"
+time="2020-10-13T08:54:21Z" level=info msg="1 errors encountered backup up item" backup=velero/mysql-bu logSource="pkg/backup/backup.go:451" name=lucent-mysql-sts-0
+time="2020-10-13T08:54:21Z" level=error msg="Error backing up item" backup=velero/mysql-bu error="timed out waiting for all PodVolumeBackups to complete" error.file="/go/src/github.com/vmware-tanzu/velero/pkg/restic/backupper.go:172" error.function="github.com/vmware-tanzu/velero/pkg/restic.(*backupper).BackupPodVolumes" logSource="pkg/backup/backup.go:455" name=lucent-mysql-sts-0
+time="2020-10-13T08:54:21Z" level=info msg="Backed up 3 items out of an estimated total of 11 (estimate will change throughout the backup)" backup=velero/mysql-bu logSource="pkg/backup/backup.go:418" name=lucent-mysql-sts-0 namespace=test-backup progress= resource=pods
+time="2020-10-13T08:54:21Z" level=info msg="Processing item" backup=velero/mysql-bu logSource="pkg/backup/backup.go:378" name=lucent-mysql-pvc namespace=test-backup progress= resource=persistentvolumeclaims
+time="2020-10-13T08:54:21Z" level=info msg="Skipping item because it's already been backed up." backup=velero/mysql-bu logSource="pkg/backup/item_backupper.go:115" name=lucent-mysql-pvc namespace=test-backup resource=persistentvolumeclaims
+time="2020-10-13T08:54:21Z" level=info msg="Backed up 3 items out of an estimated total of 10 (estimate will change throughout the backup)" backup=velero/mysql-bu logSource="pkg/backup/backup.go:418" name=lucent-mysql-pvc namespace=test-backup progress= resource=persistentvolumeclaims
+time="2020-10-13T08:54:21Z" level=info msg="Processing item" backup=velero/mysql-bu logSource="pkg/backup/backup.go:378" name=lucent-mysql-svc namespace=test-backup progress= resource=services
+time="2020-10-13T08:54:21Z" level=info msg="Backing up item" backup=velero/mysql-bu logSource="pkg/backup/item_backupper.go:121" name=lucent-mysql-svc namespace=test-backup resource=services
+time="2020-10-13T08:54:21Z" level=info msg="Backed up 4 items out of an estimated total of 10 (estimate will change throughout the backup)" backup=velero/mysql-bu logSource="pkg/backup/backup.go:418" name=lucent-mysql-svc namespace=test-backup progress= resource=services
+time="2020-10-13T08:54:21Z" level=info msg="Processing item" backup=velero/mysql-bu logSource="pkg/backup/backup.go:378" name=test-backup namespace= progress= resource=namespaces
+time="2020-10-13T08:54:21Z" level=info msg="Backing up item" backup=velero/mysql-bu logSource="pkg/backup/item_backupper.go:121" name=test-backup namespace= resource=namespaces
+time="2020-10-13T08:54:21Z" level=info msg="Backed up 5 items out of an estimated total of 10 (estimate will change throughout the backup)" backup=velero/mysql-bu logSource="pkg/backup/backup.go:418" name=test-backup namespace= progress= resource=namespaces
+time="2020-10-13T08:54:21Z" level=info msg="Processing item" backup=velero/mysql-bu logSource="pkg/backup/backup.go:378" name=default namespace=test-backup progress= resource=serviceaccounts
+time="2020-10-13T08:54:21Z" level=info msg="Backing up item" backup=velero/mysql-bu logSource="pkg/backup/item_backupper.go:121" name=default namespace=test-backup resource=serviceaccounts
+time="2020-10-13T08:54:21Z" level=info msg="Executing custom action" backup=velero/mysql-bu logSource="pkg/backup/item_backupper.go:327" name=default namespace=test-backup resource=serviceaccounts
+time="2020-10-13T08:54:21Z" level=info msg="Running ServiceAccountAction" backup=velero/mysql-bu cmd=/velero logSource="pkg/backup/service_account_action.go:77" pluginName=velero
+time="2020-10-13T08:54:21Z" level=info msg="Done running ServiceAccountAction" backup=velero/mysql-bu cmd=/velero logSource="pkg/backup/service_account_action.go:120" pluginName=velero
+time="2020-10-13T08:54:21Z" level=info msg="Backed up 6 items out of an estimated total of 10 (estimate will change throughout the backup)" backup=velero/mysql-bu logSource="pkg/backup/backup.go:418" name=default namespace=test-backup progress= resource=serviceaccounts
+time="2020-10-13T08:54:21Z" level=info msg="Processing item" backup=velero/mysql-bu logSource="pkg/backup/backup.go:378" name=default-token-2645g namespace=test-backup progress= resource=secrets
+time="2020-10-13T08:54:21Z" level=info msg="Backing up item" backup=velero/mysql-bu logSource="pkg/backup/item_backupper.go:121" name=default-token-2645g namespace=test-backup resource=secrets
+time="2020-10-13T08:54:21Z" level=info msg="Backed up 7 items out of an estimated total of 10 (estimate will change throughout the backup)" backup=velero/mysql-bu logSource="pkg/backup/backup.go:418" name=default-token-2645g namespace=test-backup progress= resource=secrets
+time="2020-10-13T08:54:21Z" level=info msg="Processing item" backup=velero/mysql-bu logSource="pkg/backup/backup.go:378" name=lucent-mysql-svc namespace=test-backup progress= resource=endpoints
+time="2020-10-13T08:54:21Z" level=info msg="Backing up item" backup=velero/mysql-bu logSource="pkg/backup/item_backupper.go:121" name=lucent-mysql-svc namespace=test-backup resource=endpoints
+time="2020-10-13T08:54:21Z" level=info msg="Backed up 8 items out of an estimated total of 10 (estimate will change throughout the backup)" backup=velero/mysql-bu logSource="pkg/backup/backup.go:418" name=lucent-mysql-svc namespace=test-backup progress= resource=endpoints
+time="2020-10-13T08:54:21Z" level=info msg="Processing item" backup=velero/mysql-bu logSource="pkg/backup/backup.go:378" name=lucent-mysql-sts namespace=test-backup progress= resource=statefulsets.apps
+time="2020-10-13T08:54:21Z" level=info msg="Backing up item" backup=velero/mysql-bu logSource="pkg/backup/item_backupper.go:121" name=lucent-mysql-sts namespace=test-backup resource=statefulsets.apps
+time="2020-10-13T08:54:21Z" level=info msg="Backed up 9 items out of an estimated total of 10 (estimate will change throughout the backup)" backup=velero/mysql-bu logSource="pkg/backup/backup.go:418" name=lucent-mysql-sts namespace=test-backup progress= resource=statefulsets.apps
+time="2020-10-13T08:54:21Z" level=info msg="Processing item" backup=velero/mysql-bu logSource="pkg/backup/backup.go:378" name=lucent-mysql-sts-56486967fb namespace=test-backup progress= resource=controllerrevisions.apps
+time="2020-10-13T08:54:21Z" level=info msg="Backing up item" backup=velero/mysql-bu logSource="pkg/backup/item_backupper.go:121" name=lucent-mysql-sts-56486967fb namespace=test-backup resource=controllerrevisions.apps
+time="2020-10-13T08:54:21Z" level=info msg="Backed up 10 items out of an estimated total of 10 (estimate will change throughout the backup)" backup=velero/mysql-bu logSource="pkg/backup/backup.go:418" name=lucent-mysql-sts-56486967fb namespace=test-backup progress= resource=controllerrevisions.apps
+time="2020-10-13T08:54:21Z" level=info msg="Backed up a total of 10 items" backup=velero/mysql-bu logSource="pkg/backup/backup.go:443" progress=
+time="2020-10-13T08:54:21Z" level=info msg="Setting up backup store to persist the backup" backup=velero/mysql-bu logSource="pkg/controller/backup_controller.go:632"
+time="2020-10-13T08:54:21Z" level=info msg="Backup completed" controller=backup logSource="pkg/controller/backup_controller.go:642"
+time="2020-10-13T08:54:35Z" level=info msg="Checking for existing backup locations ready to be verified; there needs to be at least 1 backup location available" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:58"
+time="2020-10-13T08:54:35Z" level=info msg="No backup locations were ready to be verified" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:120"
+time="2020-10-13T08:54:35Z" level=error msg="Current backup storage locations available/unavailable/unknown: 0/1/0)" controller=backupstoragelocation logSource="pkg/controller/backupstoragelocation_controller.go:154"

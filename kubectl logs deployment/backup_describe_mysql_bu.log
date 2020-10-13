@@ -1,0 +1,47 @@
+Name:         mysql-bu
+Namespace:    velero
+Labels:       velero.io/storage-location=default
+Annotations:  kubectl.kubernetes.io/last-applied-configuration={"apiVersion":"velero.io/v1","kind":"Backup","metadata":{"annotations":{},"name":"mysql-bu","namespace":"velero"},"spec":{"includedNamespaces":["test-backup"],"storageLocation":"default","ttl":"24h0m0s"}}
+
+  velero.io/source-cluster-k8s-gitversion=v1.17.9-eks-4c6976
+  velero.io/source-cluster-k8s-major-version=1
+  velero.io/source-cluster-k8s-minor-version=17+
+
+Phase:  PartiallyFailed (run `velero backup logs mysql-bu` for more information)
+
+Errors:    1
+Warnings:  0
+
+Namespaces:
+  Included:  test-backup
+  Excluded:  <none>
+
+Resources:
+  Included:        *
+  Excluded:        <none>
+  Cluster-scoped:  auto
+
+Label selector:  <none>
+
+Storage Location:  default
+
+Velero-Native Snapshot PVs:  auto
+
+TTL:  24h0m0s
+
+Hooks:  <none>
+
+Backup Format Version:  1
+
+Started:    2020-10-13 17:53:20 +0900 KST
+Completed:  2020-10-13 17:54:21 +0900 KST
+
+Expiration:  2020-10-14 17:53:20 +0900 KST
+
+Total items to be backed up:  10
+Items backed up:              10
+
+Velero-Native Snapshots: <none included>
+
+Restic Backups (specify --details for more information):
+  New:  1
