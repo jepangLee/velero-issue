@@ -1,0 +1,78 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    backup.velero.io/backup-volumes: mysql-data
+    environment: test-backup
+    kubernetes.io/psp: eks.privileged
+  generateName: mysql-sts-
+  labels:
+    app: mysql
+    controller-revision-hash: mysql-sts-56486967fb
+    environment: test-backup
+    statefulset.kubernetes.io/pod-name: mysql-sts-0
+    version: 8.0.15
+  name: mysql-sts-0
+  namespace: test-backup
+  ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: StatefulSet
+      name: mysql-sts
+      uid: 12ca22a6-4c81-4e5e-9361-615cf62baf21
+spec:
+  containers:
+    - env:
+        - name: MYSQL_DATABASE
+          value: lucent
+        - name: MYSQL_ROOT_PASSWORD
+          value: password
+      image: mysql:8.0.15
+      imagePullPolicy: IfNotPresent
+      name: mysql
+      ports:
+        - containerPort: 3306
+          protocol: TCP
+      resources:
+        limits:
+          cpu: 512m
+          memory: 1Gi
+        requests:
+          cpu: 100m
+          memory: 256Mi
+      volumeMounts:
+        - mountPath: /var/lib/mysql
+          mountPropagation: None
+          name: mysql-data
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostname: mysql-sts-0
+  initContainers:
+    - command:
+        - sh
+        - -c
+        - chown -R 999:999 /var/lib/mysql; rm -fr /var/lib/mysql/lost+found;
+      image: ubuntu:16.04
+      imagePullPolicy: IfNotPresent
+      name: remove-lost-found
+      volumeMounts:
+        - mountPath: /var/lib/mysql
+          name: mysql-data
+  priority: 0
+  restartPolicy: Always
+  serviceAccountName: default
+  shareProcessNamespace: false
+  tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+  volumes:
+    - name: mysql-data
+      persistentVolumeClaim:
+        claimName: mysql-pvc
